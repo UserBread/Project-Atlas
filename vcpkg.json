@@ -1,0 +1,11 @@
+{
+  "name": "project-atlas",
+  "version-string": "0.1.0",
+  "description": "A C++ real-time procedural urban environment system",
+  "dependencies": [
+    "glm",
+    "glfw3",
+    "nlohmann-json",
+    "spdlog"
+  ]
+}
