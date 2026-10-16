@@ -21,8 +21,8 @@ This checklist covers the Python OSM data pipeline, its generated datasets, and 
   - [X] Output directory.
   - [X] Data source.
   - [X] Overpass timeout and retry settings.
-- [ ] Validate the bounding box before making a request.
-- [ ] Validate and sanitize names before using them in filenames.
+- [X] Validate the bounding box before making a request.
+- [X] Validate and sanitize names before using them in filenames.
 - [ ] Use explicit package imports so the scripts work from the repository root as well as from `legacy/data`.
 - [ ] Replace `print` calls with structured logging and useful exit codes.
 - [ ] Return a clear error when a dependency, input, response, or output directory is invalid.

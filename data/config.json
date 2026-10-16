@@ -2,6 +2,7 @@
     "locations": {
         "malin_Head": {
             "name": "Malin Head",
+            "slug": "malin_head",
             "south": 55.34,
             "west": -7.35,
             "north": 55.37,
