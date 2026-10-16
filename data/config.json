@@ -1,0 +1,23 @@
+{
+    "locations": {
+        "malin_Head": {
+            "name": "Malin Head",
+            "south": 55.34,
+            "west": -7.35,
+            "north": 55.37,
+            "east": -7.29
+        }
+    },
+    "default" : {
+        "source" : "overpass",
+        "output_dir" : {
+            "raw" : "raw",
+            "processed" : "processed"
+        },
+        "retry" : {
+            "max_attempts" : 5,
+            "wait_time" : 10
+        },
+        "timeout" : 180
+    }
+}

@@ -62,6 +62,6 @@ deactivate
 If PowerShell activation is unavailable, run commands through the virtual environment directly:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -e ".[test]"
+.\.venv\Scripts\python.exe -m pip install -e ".[pbf, test]"
 .\.venv\Scripts\python.exe -m pytest
 ```
