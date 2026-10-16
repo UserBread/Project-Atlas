@@ -78,7 +78,8 @@ def main():
 
     try:
         location = config["locations"][args.location]
-        bbox = validate_bounding_box(",".join(str(location[key]) for key in ("south", "west", "north", "east")))
+        bbox = ",".join(str(location[key]) for key in ("south", "west", "north", "east"))
+        validate_bounding_box(bbox)
         slug = validate_and_sanitise_name(location["slug"])
     except (KeyError, TypeError, ValueError) as error:
         raise SystemExit(f"Invalid configuration: {error}") from error

@@ -9,6 +9,13 @@ def test_validate_bounding_box_accepts_valid_values():
     assert validate_bounding_box("55.34,-7.35,55.37,-7.29") is True
 
 
+def test_validated_bounding_box_remains_a_coordinate_string():
+    bbox = "55.34,-7.35,55.37,-7.29"
+
+    assert validate_bounding_box(bbox) is True
+    assert bbox != "True"
+
+
 @pytest.mark.parametrize(
     "bbox",
     [
