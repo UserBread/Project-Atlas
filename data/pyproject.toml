@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlas-data-pipeline"
+version = "0.1.0"
+description = "OSM data importer for Project Atlas"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.31,<3",
+]
+
+[project.optional-dependencies]
+pbf = [
+    "pyrosm>=0.6",
+]
+test = [
+    "pytest>=8,<9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

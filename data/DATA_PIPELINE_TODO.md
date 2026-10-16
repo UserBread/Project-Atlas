@@ -12,9 +12,9 @@ This checklist covers the Python OSM data pipeline, its generated datasets, and 
 
 ## 2. Make the current pipeline runnable
 
-- [ ] Add a dependency definition, preferably `requirements.txt` or `pyproject.toml`.
-- [ ] Pin or constrain the `requests` version.
-- [ ] Add a documented virtual-environment setup.
+- [X] Add a dependency definition, preferably `requirements.txt` or `pyproject.toml`.
+- [X] Pin or constrain the `requests` version.
+- [X] Add a documented virtual-environment setup.
 - [ ] Replace hardcoded values in `gatherGeoJSON.py` with CLI arguments or a config file:
   - [ ] City or dataset name.
   - [ ] South, west, north, and east bounds.
