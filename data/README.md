@@ -45,6 +45,23 @@ python -c "import sys; print(sys.executable)"
 
 The printed path should contain `data\.venv\Scripts\python.exe`.
 
+## Run the Pipeline
+
+From the repository root:
+
+```powershell
+python -m atlas_data_pipeline --config data\config.json --location malin_Head
+```
+
+From this directory:
+
+```powershell
+python -m atlas_data_pipeline --config config.json --location malin_Head
+```
+
+The command reads the selected location, validates its bounding box, and writes
+processed datasets to the configured output directory.
+
 Run tests with:
 
 ```powershell

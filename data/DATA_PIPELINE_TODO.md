@@ -19,13 +19,13 @@ This checklist covers the Python OSM data pipeline, its generated datasets, and 
   - [X] City or dataset name.
   - [X] South, west, north, and east bounds.
   - [X] Output directory.
-  - [X] Data source.
+  - [X] Data source. Currently supports the configured `overpass` source.
   - [X] Overpass timeout and retry settings.
 - [X] Validate the bounding box before making a request.
-- [X] Validate and sanitize names before using them in filenames.
-- [ ] Use explicit package imports so the scripts work from the repository root as well as from `legacy/data`.
-- [ ] Replace `print` calls with structured logging and useful exit codes.
-- [ ] Return a clear error when a dependency, input, response, or output directory is invalid.
+- [X] Validate and sanitise names before using them in filenames.
+- [X] Use explicit package imports in the active `atlas_data_pipeline` package and run it from the repository root or `data/` directory. The Unity scripts under `legacy/data` are historical.
+- [X] Replace pipeline status `print` calls with structured logging and useful exit codes.
+- [X] Return a clear error when an active-pipeline input, response, or output directory is invalid.
 
 ## 3. Fix OSM and geometry correctness
 
@@ -60,7 +60,7 @@ This checklist covers the Python OSM data pipeline, its generated datasets, and 
 
 ## 5. Improve storage and reproducibility
 
-- [ ] Store raw downloads separately from processed files.
+- [X] Store raw downloads separately from processed files.
 - [ ] Do not commit large raw downloads or generated datasets without an explicit repository policy.
 - [ ] Add a manifest for every generated dataset containing:
   - [ ] Source type and URL.
@@ -72,7 +72,7 @@ This checklist covers the Python OSM data pipeline, its generated datasets, and 
   - [ ] Feature counts.
   - [ ] Checksums.
 - [ ] Write generated files atomically through temporary files.
-- [ ] Preserve raw Overpass responses so conversion can be repeated without downloading again.
+- [X] Preserve raw Overpass responses so conversion can be repeated without downloading again.
 - [ ] Add deterministic ordering of features and properties where practical.
 - [ ] Add a cleanup policy for cached downloads and old generated datasets.
 - [ ] Keep the first implementation file-based; do not add MySQL for the current static-dataset workflow.
@@ -120,8 +120,8 @@ data/
 
 ## 8. Add automated tests
 
-- [ ] Test bounding-box validation.
-- [ ] Test query construction and escaping.
+- [X] Test bounding-box validation.
+- [X] Test query construction and escaping.
 - [ ] Test Overpass retry and failure behaviour without making real network requests.
 - [ ] Test malformed and empty API responses.
 - [ ] Test missing nodes and incomplete ways.

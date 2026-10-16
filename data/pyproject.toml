@@ -11,6 +11,9 @@ dependencies = [
     "requests>=2.31,<3",
 ]
 
+[project.scripts]
+atlas-data = "atlas_data_pipeline.cli:main"
+
 [project.optional-dependencies]
 pbf = [
     "pyrosm>=0.6",
@@ -21,3 +24,7 @@ test = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["atlas_data_pipeline*"]
